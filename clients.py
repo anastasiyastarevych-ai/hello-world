@@ -1,5 +1,4 @@
 def check_amount(amount):
-    """Повертає категорію клієнта за сумою угоди."""
     if isinstance(amount, bool) or not isinstance(amount, (int, float)):
         return "Фальшиві дані"
     if amount < 100:
@@ -11,7 +10,6 @@ def check_amount(amount):
 
 
 def check_status(status):
-    """Повертає рішення щодо клієнта за статусом перевірки."""
     match status:
         case "clean":
             return "Працювати без питань"
@@ -24,7 +22,6 @@ def check_status(status):
 
 
 def sort_clients(deals):
-    """Приймає список угод, повертає список клієнтів з категорією і рішенням."""
     clients = []
     for name, amount, status in deals:
         client = {
