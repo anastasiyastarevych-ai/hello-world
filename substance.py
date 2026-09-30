@@ -1,5 +1,4 @@
 def has_valid_types(quantity, temperature):
-    """Перевіряє типи: кількість має бути int, температура мфє бути float."""
     if isinstance(quantity, bool) or not isinstance(quantity, int):
         return False
     if isinstance(temperature, bool) or not isinstance(temperature, float):
@@ -8,7 +7,6 @@ def has_valid_types(quantity, temperature):
 
 
 def check_temperature(temperature):
-    """Повертає стан температури зберігання."""
     if temperature < 5:
         return "Надто холодно"
     elif temperature > 25:
@@ -18,7 +16,6 @@ def check_temperature(temperature):
 
 
 def check_category(category):
-    """Повертає статус за категорією препарату."""
     match category:
         case "antibiotic":
             return "Рецептурний препарат"
@@ -31,7 +28,6 @@ def check_category(category):
 
 
 def check_batch(batch):
-    """Приймає список препаратів, поіертає список результатів перевірки."""
     results = []
     for name, quantity, category, temperature in batch:
         if has_valid_types(quantity, temperature):
