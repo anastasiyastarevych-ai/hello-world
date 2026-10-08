@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 def check_type(value, kind, label):
     if type(value) is not kind:
         raise TypeError(f"{label} має бути {kind.__name__}")
