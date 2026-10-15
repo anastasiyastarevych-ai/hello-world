@@ -91,3 +91,4 @@ for mode in ("corp", "shadow"):
     print(f"=== Режим: {CONFIG['mode']} ===")
     generate_documents(get_factory(CONFIG["mode"]), requested)
     print()
+    
